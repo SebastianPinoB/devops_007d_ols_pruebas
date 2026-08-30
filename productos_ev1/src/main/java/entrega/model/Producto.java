@@ -1,4 +1,4 @@
-package com.example.api.model;
+package entrega.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
