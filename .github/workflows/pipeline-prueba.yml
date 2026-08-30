@@ -1,0 +1,23 @@
+name: pipeline pentrega evaluacion 1
+on:
+  push:
+    branches: [main]
+  
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  Checkout
+        uses: actions/checkout@v4
+      - name: Verifica el contenido del repositorio
+        run:
+          echo "Este es el arbol del contenido del repositorio:"
+          tree
+      
+      - name: Verificar Node
+        run:
+          node --version
+
+      - name: Ejecutar comandos de prueba
+        run: echo "¡El pipeline se está ejecutando correctamente!"
