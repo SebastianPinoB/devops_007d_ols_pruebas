@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name:  Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Verifica el contenido del repositorio
         run:
           echo "Este es el arbol del contenido del repositorio:"
@@ -19,5 +19,15 @@ jobs:
         run:
           node --version
 
+      - name: Configurar Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21' 
+          cache: 'maven'
+
       - name: Ejecutar comandos de prueba
         run: echo "¡El pipeline se está ejecutando correctamente!"
+
+      - name: Compilar e instalar dependencias con Maven
+        run: ./mvnw clean install -DskipTests

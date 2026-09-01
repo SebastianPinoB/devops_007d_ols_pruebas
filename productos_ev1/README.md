@@ -23,4 +23,10 @@ Se mantuvo el orden requerido para la entrega desarrollando las branches en 'fun
 
 ## Sobre automatizacion (CI/CD)
 
-LLenar
+El rol de la automatizacion dentro de un proceso de CI/CD a la hora de desarrollar software es actuar como el motor y el orquestador invisible que se encarga de ejecutar las tareas repetitivas de forma autonoma, es decir sin intervencion humana directa. En este caso el proceso que se automatizo es super sencillo:
+
+1. Verifica el contenido del repositorio
+2. Verificar la version de Node
+3. Configura Java JDK
+4. Ejecuta comandos de prueba
+5. Compila e instala dependencias con Maven
