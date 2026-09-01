@@ -28,6 +28,3 @@ jobs:
 
       - name: Ejecutar comandos de prueba
         run: echo "¡El pipeline se está ejecutando correctamente!"
-
-      - name: Compilar e instalar dependencias con Maven
-        run: ./mvnw clean install -DskipTests
